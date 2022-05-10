@@ -8,33 +8,32 @@ int main(){
 	int sum = 0;
 	scanf("%d", &n);
 	
-	for(int i = 0; i<=n; i++){				// 횟수에 따른 반복문.
+	for(int i = 0; i<n; i++){
 		int j = 0;
 		sum = 0;
-		fgets(judge, sizeof(judge),stdin); 		// judge 입력.
-		
+		scanf("%s",judge);
 		while(1){
-			if(judge[j] == '\0'){				//마지막 배열일 경우에 break를 실행.
+			if(judge[j] == '\0'){
 				break;
 			}
-			if(judge[j] == 'O' && judge[j-1] == 'O'){		// O가 연속적으로 등장할 경우에 점수를 count함.
+			if(judge[j] == 'O' && judge[j+1] == 'O'){
 				count ++;
 				sum += count;
 			}
-			else if(judge[j] == 'O'){			// 연속적인 X가 아닐 경우에 count를 1로 초기화 후에 sum에 count값을 추가.
-				count = 1;
+			else if(judge[j] == 'O'){
+				count=1;
 				sum += count;
 			}
 			
-			if( judge[j] == 'X'){			//X일 경우에 다시 count를 1로 초기화.
+			if( judge[j] == 'X'){
 				count = 1;
 			}
 			j++;
 		}
-		result[i] = sum;			// 결과값 라인에 count를 추가.
+		result[i] = sum;
 	}
 
-	for(int i = 1; i<= n ; i++){			// result 출력.
+	for(int i = 0; i< n ; i++){
 		printf("%d\n",result[i]);
 	}	
 }
