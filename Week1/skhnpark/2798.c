@@ -6,7 +6,7 @@ int main(void)
 {
 	int n, m, test;
 	int max = 0;
-	char ary[100];
+	int ary[100];
 
 	scanf("%d %d", &n, &m);
 	for (int i = 0; i < n; i++) {
