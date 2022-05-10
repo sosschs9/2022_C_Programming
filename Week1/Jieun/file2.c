@@ -7,17 +7,19 @@ int main(void)
 	
 
 		scanf("%d %d", &N, &M);
-		int card[100]={0};
+		int card[100000]={0};
 
 		for (int i = 0; i < N; i++) {
 			scanf("%d", &card[i]);
 		}
+
 		for (int i = 0; i < N; i++) {
-			for (int j = 0; j < i; j++) {
-				for (int k = 0; k < j; k++) {
+			for (int j = i+1; j < N; j++) {
+				for (int k = j+1; k < N; k++) {
 					if (card[i] + card[j] + card[k] > min && card[i] + card[j] + card[k] <= M) {
 						min = card[i] + card[j] + card[k];
 					}
+
 				}
 			}
 		}
