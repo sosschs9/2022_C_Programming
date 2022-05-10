@@ -14,7 +14,7 @@ int main(void)
 		score = 0;
 		count = 0;
 
-		scanf("%s", &ary);
+		scanf("%s", ary);
 		for (int j = 0; j < strlen(ary); j++) {
 			if (ary[j] == 'O') {
 				count++;
