@@ -16,7 +16,7 @@ int main(){
 			if(judge[j] == '\0'){
 				break;
 			}
-			if(judge[j] == 'O' && judge[j+1] == 'O'){
+			if(judge[j] == 'O' && judge[j-1] == 'O'){
 				count ++;
 				sum += count;
 			}
@@ -25,9 +25,6 @@ int main(){
 				sum += count;
 			}
 			
-			if( judge[j] == 'X'){
-				count = 1;
-			}
 			j++;
 		}
 		result[i] = sum;
