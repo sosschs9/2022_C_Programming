@@ -21,8 +21,9 @@ int main()
 			if (w[i] < w[j] && t[i] < t[j])
 			{
 				count++;
-			}
-			printf("%d ", count);
+			}	
 		}
+		printf("%d ", count);
 	}
+	
 }
