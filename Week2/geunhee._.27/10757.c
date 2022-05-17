@@ -3,9 +3,9 @@
 
 /*int main(void)
 {
-	int arr1[10000];
-	int arr2[10000];
-	int arr3[10000];
+	char arr1[10000];
+	char arr2[10000];
+	char arr3[10000];
 	int i;
 
 	scanf("%s %s", arr1, arr2);
