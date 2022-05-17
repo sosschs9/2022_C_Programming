@@ -5,11 +5,12 @@
 int main(void)
 {
 	char a[10001], b[10001];
+	int c[10001], d[10001];
+	int size;
 
 	
 	scanf("%s %s", &a, &b);
-	int c[10001], d[10001];
-	int size;
+
 	if (strlen(a) >= strlen(b)) {
 		size = strlen(a);
 		for (int i = 0; i < size; i++) {
