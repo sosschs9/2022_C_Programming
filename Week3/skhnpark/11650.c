@@ -13,7 +13,7 @@ int main(void)
 	}
 
 	for (int i = 0; i < N; i++) {
-		for (int j = 0; j < N - 1; j++) {
+		for (int j = i + 1; j < N - 1; j++) {
 			if (x[j] > x[j + 1]) {
 				temp = x[j];
 				x[j] = x[j + 1];
@@ -23,7 +23,7 @@ int main(void)
 	}
 
 	for (int i = 0; i < N; i++) {
-		for (int j = 0; j < N - 1; j++) {
+		for (int j = i + 1; j < N - 1; j++) {
 			if (y[j] > y[j + 1]) {
 				temp = y[j];
 				y[j] = y[j + 1];
