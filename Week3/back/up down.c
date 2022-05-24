@@ -36,7 +36,7 @@ int main()
 				printf("%c",word[j][i]);
 		}
 
-		return 0;
+		
 	}
-
+	return 0;
 }
