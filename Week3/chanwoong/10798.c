@@ -1,9 +1,3 @@
-#define _CRT_SECURE_NO_WARNINGS 
-#include <stdio.h>
-struct coordinate{
-	int x;
-	int y;
-};
 #define _CRT_SECURE_NO_WARNINGS
 #include <stdio.h>
 #include <string.h>
