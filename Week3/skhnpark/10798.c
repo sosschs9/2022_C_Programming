@@ -6,7 +6,7 @@
 
 int main(void)
 {
-	char ary[MAX][LINE];
+	char ary[LINE][MAX];
 
 	for (int i = 0; i < LINE; i++) {
 		scanf("%s", ary[i]);
