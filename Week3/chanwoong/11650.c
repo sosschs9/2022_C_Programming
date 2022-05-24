@@ -18,14 +18,10 @@ void sortCoordinate(int n, int x[], int y[]) {
 	int tmp;
 	for (int i = 0; i < n; i++) {
 		for (int j = i + 1; j < n; j++) {
-			if (x[i] > x[j]) {
+			if (x[i] > x[j] ||(x[i] == x[j] && y[i] > y[j])) {
 				tmp = x[i];
 				x[i] = x[j];
 				x[j] = tmp;
-				tmp = y[i];
-				y[i] = y[j];
-				y[j] = tmp;
-			}else if (x[i] == x[j] && y[i] > y[j]) {
 				tmp = y[i];
 				y[i] = y[j];
 				y[j] = tmp;
