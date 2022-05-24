@@ -6,7 +6,7 @@ int main(void) {
 	char word[5][15] = { 0 };
 
 	for (int i = 0; i < 5; i++) {
-		scanf("%s", &word[i]);
+		scanf("%s", word[i]);
 	}
 
 	for (int j = 0; j < 15; j++) {
