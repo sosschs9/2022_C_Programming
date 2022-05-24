@@ -20,9 +20,9 @@ void lengthReading(char w[][15]) {
 		for (int j = 0; j < 5; j++) {
 			if (w[j][i] == NULL){
 			 continue;	
-			} else {
-				printf("%c", w[j][i]);
 			}
+			printf("%c", w[j][i]);
+			
 			
 		}
 	}
