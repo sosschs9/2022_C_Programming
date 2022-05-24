@@ -1,3 +1,9 @@
+#define _CRT_SECURE_NO_WARNINGS 
+#include <stdio.h>
+struct coordinate{
+	int x;
+	int y;
+};
 #define _CRT_SECURE_NO_WARNINGS
 #include <stdio.h>
 #include <string.h>
@@ -18,10 +24,10 @@ void lengthReading(char w[][15]) {
 	for (int i = 0; i < 15; i++) {
 		
 		for (int j = 0; j < 5; j++) {
-			if (w[j][i] == NULL){
-			 continue;	
+			if (w[j][i] != NULL){
+				printf("%c", w[j][i]);
 			}
-			printf("%c", w[j][i]);
+			
 			
 			
 		}
