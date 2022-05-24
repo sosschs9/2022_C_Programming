@@ -6,14 +6,15 @@
 
 int main(void)
 {
-	char ary[LINE][MAX];
+	char ary[LINE][MAX] = { 0 };
 
 	for (int i = 0; i < LINE; i++) {
 		scanf("%s", ary[i]);
 	}
 
-	for (int i = 0; MAX; i++) {
+	for (int i = 0; i < MAX; i++) {
 		for (int j = 0; j < LINE; j++) {
+			if (ary[j][i] == NULL) continue;
 			printf("%c", ary[j][i]);
 		}
 	}
