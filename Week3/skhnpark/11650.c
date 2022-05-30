@@ -2,37 +2,43 @@
 
 #include <stdio.h>
 
+typedef struct
+{
+	int x;
+	int y;
+} coordinate;
+
 int main(void)
 {
 	int N;
-	int x[100], y[100], temp = 0;
+	coordinate crd[100000];
 
 	scanf("%d", &N);
 	for (int i = 0; i < N; i++) {
-		scanf("%d %d", x[i], y[i]);
+		scanf("%d %d", &crd[i].x, &crd[i].y);
 	}
 
 	for (int i = 0; i < N; i++) {
-		for (int j = i + 1; j < N - 1; j++) {
-			if (x[j] > x[j + 1]) {
-				temp = x[j];
-				x[j] = x[j + 1];
-				x[j + 1] = temp;
+		for (int j = 0; j < N - 1; j++) {
+			if (crd[j + 1].x < crd[j].x) {
+				coordinate temp = crd[j];
+				crd[j] = crd[j + 1];
+				crd[j + 1] = temp;
 			}
 		}
 	}
-
 	for (int i = 0; i < N; i++) {
-		for (int j = i + 1; j < N - 1; j++) {
-			if (y[j] > y[j + 1]) {
-				temp = y[j];
-				y[j] = y[j + 1];
-				y[j + 1] = temp;
+		for (int j = 0; j < N - 1; j++) {
+			if (crd[j + 1].y < crd[j].y) {
+				coordinate temp = crd[j];
+				crd[j] = crd[j + 1];
+				crd[j + 1] = temp;
 			}
 		}
 	}
-
 	for (int i = 0; i < N; i++) {
-		printf("%d %d\n", x[i], x[i]);
+		printf("%d %d\n", crd[i].x, crd[i].y);
 	}
+
+	return 0;
 }
