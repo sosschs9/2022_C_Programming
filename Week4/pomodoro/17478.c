@@ -8,44 +8,55 @@
 #define answer "\"재귀함수는 자기 자신을 호출하는 함수라네\""
 #define end "라고 답변하였지."
 void conversation(int repeat, int n);
+
 int main() {
 	int repeat; scanf("%d", &repeat);
 	puts(depart);
 	conversation(repeat, 0);
 }
+
 void conversation(const int repeat, int n) {
 	if (repeat == n) {
 		for (int i = 0; i < n; i++) {
 			printf(line);
 		}
 		puts(question);
+        
 		for (int i = 0; i < n; i++) {
 			printf(line);
 		}
 		puts(answer);
+        
 		for (int i = 0; i < n; i++) {
 			printf(line);
 		}
 		puts(end);
+        
 		return;
 	}
+
 	for (int i = 0; i < n; i++) {
 		printf(line);
 	}
 	puts(question);
+
 	for (int i = 0; i < n; i++) {
 		printf(line);
 	}
 	puts(story1);
+
 	for (int i = 0; i < n; i++) {
 		printf(line);
 	}
 	puts(story2);
+
 	for (int i = 0; i < n; i++) {
 		printf(line);
 	}
 	puts(story3);
+
 	conversation(repeat, n + 1);
+    
 	for (int i = 0; i < n; i++) {
 		printf(line);
 	}
