@@ -6,7 +6,7 @@ typedef struct student{                 //구조체 선언
 	int score;
 }student; 
 
-void nationCordinate(int n, student std[]);             //함수 선언
+void nationCompare(int n, student std[]);             //함수 선언
 void sort(int n, student std[]);
 
 int main(){
@@ -21,7 +21,7 @@ int main(){
 	
 }
 
-void nationCordinate(int n , student std[]){                  // 한 국가에서 메달이 2개 이상 나오지 않을 때 출력.
+void nationCompare(int n , student std[]){                  // 한 국가에서 메달이 2개 이상 나오지 않을 때 출력.
 	int count[100]={0};
 	int cnt = 0;
 	for(int i = n-1 ; i > 0 ; i--){
