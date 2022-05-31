@@ -17,14 +17,14 @@ int main(){
 		scanf("%d %d %d",&std[i].nation,&std[i].stdNum,&std[i].score);
 	}
 	sort(n, std);
-	nationCordinate(n, std);
+	nationCompare(n, std);
 	
 }
 
 void nationCompare(int n , student std[]){                  // 한 국가에서 메달이 2개 이상 나오지 않을 때 출력.
 	int count[100]={0};
 	int cnt = 0;
-	for(int i = n-1 ; i > 0 ; i--){
+	for(int i = n-1 ; i >= 0 ; i--){
 		count[std[i].nation]++;
 		if(count[std[i].nation] > 2){
 			continue;
