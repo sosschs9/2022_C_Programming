@@ -10,7 +10,7 @@ void nationCordinate(int n, student std[]);             //함수 선언
 void sort(int n, student std[]);
 
 int main(){
-	student std[100]={0};
+	student std[10000]={0};
 	int n;
 	scanf("%d",&n);
 	for(int i = 0; i < n ; i++){
