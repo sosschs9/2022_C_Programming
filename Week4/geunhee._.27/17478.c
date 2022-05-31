@@ -22,6 +22,9 @@ int main(void) {
 }
 
 void chat1(int a,int i) {
+	if (a == i) {
+		return;
+	}
 	count++;
 	for (int k = 1; k < count; k++) {
 		printf("____");
@@ -39,10 +42,7 @@ void chat1(int a,int i) {
 		printf("____");
 	}
 	printf("그의 답은 대부분 옳았다고 하네. 그런데 어느 날, 그 선인에게 한 선비가 찾아와서 물었어.\"\n");
-
-	if (a == i) {
-		return;
-	}
+	
 	chat1(a+1 ,i);
 }
 
