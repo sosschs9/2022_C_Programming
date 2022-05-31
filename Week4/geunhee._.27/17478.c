@@ -18,7 +18,7 @@ int main(void) {
 	
 	printanswer();
 	
-    chat2(a,n);
+        chat2(a,n);
 }
 
 void chat1(int a,int i) {
@@ -58,13 +58,13 @@ void printanswer() {
 }
 
 void chat2(int a,int i) { 
+	if (a == i + 1) {
+		return;
+	}
 	for (int k = count+1;k>1; k--) {
 		printf("____");
 	}
 	printf("라고 답변하였지.\n");
 	count--;
-	if (a == i + 1) {
-		return;
-	}
 	chat2(a + 1,i);
 }
