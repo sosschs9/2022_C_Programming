@@ -9,7 +9,6 @@ typedef struct
 	int country;
 	int student_id;
 	int score;
-	int limit;
 
 } information;
 
@@ -32,10 +31,6 @@ int main(void)
 				info[j + 1] = temp;
 			}
 		}
-	}
-
-	for (int i = 0; i < N; i++) {
-		info[i].limit = 0;
 	}
 
 	return 0;
